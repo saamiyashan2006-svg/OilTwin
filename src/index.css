@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050608;
+  color: #d4dae6;
+  font-family: 'Chakra Petch', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(200, 155, 44, 0.3);
+  color: #f0d068;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3040;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4356;
+}
+
+@layer components {
+  .label-tag {
+    @apply font-mono text-[10px] uppercase tracking-[0.25em] text-steel-400;
+  }
+  .glass-panel {
+    @apply border border-white/10 bg-base-900/60 backdrop-blur-md;
+  }
+}
+
+@layer utilities {
+  .text-glow-oil {
+    text-shadow: 0 0 20px rgba(200, 155, 44, 0.4);
+  }
+  .text-glow-accent {
+    text-shadow: 0 0 20px rgba(45, 184, 184, 0.4);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .blueprint-bg {
+    background-image:
+      linear-gradient(rgba(200, 155, 44, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200, 155, 44, 0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+}
